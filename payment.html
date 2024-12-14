@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopkeeper Dashboard</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shopkeeper Dashboard</h1>
+            <nav>
+                <button id="dashboard-btn" class="nav-btn active">Dashboard</button>
+                <button id="payments-btn" class="nav-btn">Payment History</button>
+                <button id="stock-btn" class="nav-btn">Stock Management</button>
+                <button id="sales-btn" class="nav-btn">Sales Analytics</button>
+            </nav>
+        </header>
+        <main>
+            <section id="dashboard" class="active">
+                <h2>Dashboard</h2>
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>Total Revenue</h3>
+                        <p id="total-revenue">$0</p>
+                    </div>
+                    <div class="card">
+                        <h3>Total Orders</h3>
+                        <p id="total-orders">0</p>
+                    </div>
+                    <div class="card">
+                        <h3>Low Stock Items</h3>
+                        <p id="low-stock">0</p>
+                    </div>
+                </div>
+            </section>
+            <section id="payments">
+                <h2>Payment History</h2>
+                <table id="payment-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Customer</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+            <section id="stock">
+                <h2>Stock Management</h2>
+                <form id="add-product-form">
+                    <input type="text" id="product-name" placeholder="Product Name" required>
+                    <input type="number" id="product-quantity" placeholder="Quantity" required>
+                    <input type="number" id="product-price" placeholder="Price" step="0.01" required>
+                    <button type="submit">Add Product</button>
+                </form>
+                <table id="stock-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+            <section id="sales">
+                <h2>Sales Analytics</h2>
+                <canvas id="sales-chart"></canvas>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
