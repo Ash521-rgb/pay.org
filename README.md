@@ -1,0 +1,2 @@
+# pay.org
+for shop
